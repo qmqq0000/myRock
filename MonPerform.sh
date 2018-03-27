@@ -25,7 +25,7 @@ while getopts "hd:fi:nt" opt; do
       DELAY=$OPTARG
       ;;
     f )
-      FILE=rock-stats-$HOST_NAME-$DATESTAMP.txt
+      FILE=stats-$HOST_NAME-$DATESTAMP.txt
       ;;
     i )
       ITERATIONS=$OPTARG
