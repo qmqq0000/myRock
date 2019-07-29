@@ -6,7 +6,14 @@ Docker Containers As Jenkins Build Slaves
         
 2. Enable docker remote API
         https://scriptcrunch.com/enable-docker-remote-api/
-
+        
+        Linux (Centos):
+        docker config: /lib/systemd/system/docker.service
+          ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock
+        Windows 10 Enterprise:
+        C:\ProgramData\Docker\config\daemon.json
+          "hosts": ["tcp://0.0.0.0:4243"]
+        
 3. Configure Jenkins Server
 
    3.1 Head over to Jenkins Dashboard –> Manage jenkins –> Manage Plugins.
